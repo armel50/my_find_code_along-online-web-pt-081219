@@ -4,9 +4,10 @@ def my_find(collection)
   i = 0 
   while i < collection.size do 
     if yield(collection[i]) 
-      found = 
+      found = collection[i]
+      break
     end
-   found = true if yield(collection[i])
+  
     i += 1
   end 
   found
